@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underhill Circle Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Confetti layer (populated by JS on high scores) -->
+    <div id="confettiContainer" class="confetti-container"></div>
+
+    <div class="container">
+
+        <!-- ══════════════════════════════════════════════════════
+             INSTRUCTION SCREEN
+             ════════════════════════════════════════════════════ -->
+        <div id="instructionScreen" class="screen active">
+
+            <div class="header-logos">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Underhill Logo" class="header-logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Underhill Logo" class="header-logo">
+            </div>
+
+            <!-- Live leaderboard preview -->
+            <div class="leaderboard-preview">
+                <h3>🏆 Top 10 Scores</h3>
+                <table id="previewLeaderboardTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="previewLeaderboardBody">
+                        <tr><td colspan="4">Loading…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h1>Welcome To The Underhill School Challenge</h1>
+            <p class="subtitle">How perfect is your circle? Draw one to find out!</p>
+            <button id="startBtn" class="btn btn-primary">Start Drawing ⭕</button>
+
+            <footer class="page-footer">Designed by DAWOOD RIYAZI (4 Cherry) · 2026</footer>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════════
+             GAME SCREEN
+             ════════════════════════════════════════════════════ -->
+        <div id="gameScreen" class="screen game-background">
+
+            <div class="header-logos">
+                <div class="header-left">
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt="Underhill Logo" class="header-logo">
+                    <div id="topScoreDisplay" class="top-score">Top Score: --</div>
+                </div>
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Underhill Logo" class="header-logo">
+            </div>
+
+            <!-- Live score counter (updates while drawing) -->
+            <div id="scoreDisplay"></div>
+
+            <!-- Drawing canvas -->
+            <div class="canvas-wrapper">
+                <canvas id="drawingCanvas"></canvas>
+            </div>
+
+            <!-- Validation error -->
+            <div id="errorMessage" class="error-message"></div>
+
+            <footer class="page-footer">Designed by DAWOOD RIYAZI (4 Cherry) · 2026</footer>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════════
+             FORM SCREEN  (score result + name entry)
+             ════════════════════════════════════════════════════ -->
+        <div id="formScreen" class="screen">
+
+            <div class="header-logos">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Underhill Logo" class="header-logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Underhill Logo" class="header-logo">
+            </div>
+
+            <h2>Your Result</h2>
+
+            <!-- Big score headline -->
+            <p id="finalScore" class="final-score-display"></p>
+
+            <!-- Score breakdown bars (Roundness / Coverage / Closure) -->
+            <div id="breakdownPanel" class="breakdown-panel"></div>
+
+            <!-- Name / class form -->
+            <form id="scoreForm">
+                <div class="form-group">
+                    <label for="nameInput">Your Name</label>
+                    <input type="text" id="nameInput" placeholder="e.g. Alex Smith" required>
+                </div>
+                <div class="form-group">
+                    <label for="classInput">Your Class</label>
+                    <input type="text" id="classInput" placeholder="e.g. 4 Cherry" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit to Leaderboard 🏆</button>
+            </form>
+
+            <footer class="page-footer">Designed by DAWOOD RIYAZI (4 Cherry) · 2026</footer>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════════
+             LEADERBOARD SCREEN
+             ════════════════════════════════════════════════════ -->
+        <div id="leaderboardScreen" class="screen">
+
+            <div class="header-logos">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Underhill Logo" class="header-logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Underhill Logo" class="header-logo">
+            </div>
+
+            <h2>Leaderboard 🏆</h2>
+            <p id="totalParticipants" class="total-participants"></p>
+
+            <div class="table-container">
+                <table id="leaderboardTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardBody"></tbody>
+                </table>
+            </div>
+
+            <div class="leaderboard-buttons">
+                <button id="tryAgainBtn"    class="btn btn-primary">Try Again ⭕</button>
+                <button id="backToStartBtn" class="btn btn-secondary">Back to Start</button>
+            </div>
+
+            <footer class="page-footer">Designed by DAWOOD RIYAZI (4 Cherry) · 2026</footer>
+        </div>
+
+    </div><!-- /.container -->
+
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
