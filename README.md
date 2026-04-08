@@ -17,6 +17,7 @@ Now here are some from Neal.fun 💯⭕
 <img width="1365" height="1095" alt="image" src="https://github.com/user-attachments/assets/affbc5ac-ac8a-41a7-900f-ccd346881199" />
 <img width="1043" height="931" alt="image" src="https://github.com/user-attachments/assets/9a5f4c1d-2725-4f51-9310-4a98c701ebb4" />
 
+The web is Neal.fun 
 
 
 I hoped you like it!!!!!!!!!! 
