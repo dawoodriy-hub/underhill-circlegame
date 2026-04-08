@@ -1,0 +1,21 @@
+.circle {
+  border-radius: 50%;
+  background-color: #4CAF50;
+  width: 100px;
+  height: 100px;
+}
+
+.start-button {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.scoreboard {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
