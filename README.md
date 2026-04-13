@@ -1,9 +1,10 @@
-UNDERHILL CIRCLE GAME 
+# 🟡 The Underhill Circle Game 🟡
 
-First of all I got the idea from Neal.fun he had this cool circle game I checked it out it was amazing so then I said to myself what if I could do the same so I did!
-I got ready I used AI to help along the way it took around 2 months and when was ready I pushed it to Github repo and then to deploy it online I used Render. But to deploy it. It took 15 tries (or more) to do it.
+Hi! I'm a Year 4 student at Underhill School in Barnet, London. 
 
-Here are some screenshot of the (my) game
+If you look at our school logo, you'll see a perfect black circle around the letters. That gave me a fun idea for a coding project! I used **Python** and **AI** to build a game where *you* try to draw a perfect freehand circle around the Underhill logo. 
+
+**How to play:** Draw the best circle you can. The more accurate your circle is, the higher your score! Can you get a perfect 100%?
 
 <img width="2058" height="1371" alt="image" src="https://github.com/user-attachments/assets/0cf4a902-f0e3-439b-9cf8-83730aa8f07a" />
 <img width="1964" height="1193" alt="image" src="https://github.com/user-attachments/assets/c8ff00be-938c-4408-836b-28bbccf28ff7" />
