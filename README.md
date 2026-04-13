@@ -1,4 +1,4 @@
-# 🟡 The Underhill Circle Game 🟡
+# 🟡 The Underhill Freehand Circle Drawing Game 🟡
 
 Hi! I'm a Year 4 student at Underhill School in Barnet, London. 
 
