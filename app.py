@@ -65,7 +65,7 @@ def leaderboard():
     c.execute("""SELECT id, name, class, score 
                  FROM scores 
                  ORDER BY score DESC 
-                 LIMIT 10""")
+                 LIMIT 7""")
     scores = c.fetchall()
     conn.close()
 
